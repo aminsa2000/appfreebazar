@@ -2,7 +2,7 @@ do
 
 function run(msg, matches)
 
-local fuse = ' DearAdminًںکœ we have recived a new feedback just now : #newfeedback \n\nid : ' .. msg.from.id .. '\n\nName : ' .. msg.from.print_name ..'\n\nusernameâ–¶ï¸ڈ :@ ' .. msg.from.username  ..'\n\pmn :\n\n\n' .. matches[1] 
+local fuse = ' DearAdmin  we have recived a new feedback just now : @bold *newfeedback* \n\nid : ' .. msg.from.id .. '\n\nName : ' .. msg.from.print_name ..'\n\nusernameâ–¶ï¸ڈ :@ ' .. msg.from.username  ..'\n\pmn :\n\n\n' .. matches[1] 
 local fuses = '!printf user#id' .. msg.from.id
 
 
@@ -19,7 +19,7 @@ local fuses = '!printf user#id' .. msg.from.id
  else
 
 
-                 local sends0 = send_msg('chat#82481072', fuse, ok_cb, false)
+                 local sends0 = send_msg('chat#85452989', fuse, ok_cb, false)
 
  return 'Your request has been sended to The Moderators ! '
 
