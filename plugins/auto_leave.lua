@@ -11,7 +11,7 @@ local function callback(extra, success, result)
 end
 
 local function run(msg)
-  if msg.service and msg.action.type == 'chat_add_user' then
+  if msg.service and msg.action.type == chat_add_user then
     local data = load_data(_config.moderation.data)
     if not data[tostring(msg.to.id)] then
       print "This is not our group. Leaving..."
