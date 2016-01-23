@@ -15,8 +15,15 @@ local function pre_process(msg)
   if msg.from.id == our_id then
     return msg
   end
-  
-    -- Save user on Redis
+  --Load moderation data
+  local data = load_data(_config.moderation.data)
+  if data[tostring(msg.to.id)] then
+    --Check if flood is one or off
+    if data[tostring(msg.to.id)]['settings']['flood'] == 'no' then
+      return msg
+    end
+  end
+  -- Save user on Redis
   if msg.from.type == 'user' then
     local hash = 'user:'..msg.from.id
     print('Saving user', hash)
@@ -43,15 +50,6 @@ local function pre_process(msg)
   -- Total user msgs
   local hash = 'msgs:'..msg.from.id..':'..msg.to.id
   redis:incr(hash)
-
-  --Load moderation data
-  local data = load_data(_config.moderation.data)
-  if data[tostring(msg.to.id)] then
-    --Check if flood is one or off
-    if data[tostring(msg.to.id)]['settings']['flood'] == 'no' then
-      return msg
-    end
-  end
 
   -- Check flood
   if msg.from.type == 'user' then
