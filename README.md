@@ -466,16 +466,23 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```
 
 ```bash
-# lets install the bot
+# lets install the bot  نحوه نصب ربات : 
 cd $HOME
 git clone https://github.com/Creedsteam/creed.git
 cd creed
 chmod +x launch.sh
 ./launch.sh install
-go to creed/tg/tgl/structures.c and in line 983 there is 4 Blue sentences Remove them and put this phrase in the place of those Blues : case CODE_message_media_unsupported:
+
+و الان به آدرس creed/tg/tgl/structures.c  بروید و در لاین 982 تا5 که چهار خط آبی هست رو پاک کنید و هبارت دو جمله پایینی را وارد کرده و بعدا طبق دستورات پیش بروید 
+go to creed/tg/tgl/structures.c and in line 983 there is 4 Blue sentences Remove them and put this phrase in the place of those Blues :
+
+case CODE_message_media_unsupported:
 M->type = tgl_message_media_unsupported;
 break;
-then come back to the TG file and type : Make
+
+
+then come back to the TG file and type : 
+Make
 ./launch.sh # Enter a phone number & confirmation code.
 ```
 ### One command
@@ -483,7 +490,8 @@ To install everything in one command on debian-based distros, use: (useful for V
 ```sh
 #https://github.com/yagop/telegram-bot/wiki/Installation
 
-sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/creedsteam/creed.git && cd creed && chmod +x launch.sh && ./launch.sh install && cd $home $$ cd creed & cd tg && cd tgl  && nano structures.c
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
+ && git clone https://github.com/creedsteam/creed && cd creed && chmod +x launch.sh && ./launch.sh install && cd $home $$ cd creed & cd tg && cd tgl  && nano structures.c
 
 then you have to go to the line 983 there is 4 Blue Line you have to delete them and Put this Sentence in there  : 
 
