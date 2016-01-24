@@ -223,6 +223,7 @@ function create_config( )
     "block",
     "tagall",
     "text",
+    "Anti_bot",
     "info",
     "bot_on_off",
     "welcome",
