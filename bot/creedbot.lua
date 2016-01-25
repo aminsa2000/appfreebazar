@@ -220,7 +220,6 @@ function create_config( )
     "cpu",
     "calc",
     "bin",
-    "block",
     "tagall",
     "text",
     "info",
