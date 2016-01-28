@@ -239,8 +239,8 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {139534999},--Sudo users
-    disabled_channels = {},
+    sudo_users = {},--Sudo users
+    disabled_chann144152859els = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
     about_text = [[Creed bot 2.3
@@ -250,7 +250,7 @@ function create_config( )
     ‼️ this bot is made by : @creed_is_dead
    〰〰〰〰〰〰〰〰
    ߔࠀ   our admins are : 
-   ߔࠀ   @rm13790115   〰〰〰〰〰〰〰〰
+   ߔࠀ   @amirmr33   〰〰〰〰〰〰〰〰
   ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
    تمامی درخواست ها و همه ی انتقادات و حرفاتونو با دستور زیر بفرستین به ما
    !feedback (your ideas and messages)
